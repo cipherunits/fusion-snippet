@@ -1,73 +1,41 @@
-# fusion-snippet README
+<p align="center">
+  <img src="./assets/fusion-logo.png" alt="Fusion Snippet" width="120" />
+</p>
 
-This is the README for your extension "fusion-snippet". After writing up a brief description, we recommend including the following sections.
+<h1 align="center">Fusion Snippet</h1>
 
-## Features
+<p align="center">
+  Code snippets for <strong>Fusion Framework</strong> developers in Visual Studio Code.
+</p>
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Supported languages
 
-For example if there is an image subfolder under your extension project workspace:
+This extension is planned to ship snippets for three languages:
 
-\!\[feature X\]\(images/feature-x.png\)
+| Language   | Status      |
+| ---------- | ----------- |
+| TypeScript | Coming soon |
+| Python     | Coming soon |
+| C#         | Coming soon |
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Snippet prefixes and bodies are not ready yet. Once they ship, you will be able to trigger them from the editor like any other VS Code snippet.
+
+## Current status
+
+For the latest progress and release updates, check:
+
+**[fusion.cipherunit.xyz](https://fusion.cipherunit.xyz)**
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code `1.85.0` or newer
 
-## Extension Settings
+## Links
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- Website: [cipherunit.xyz](https://cipherunit.xyz)
+- Fusion: [fusion.cipherunit.xyz](https://fusion.cipherunit.xyz)
+- Issues: [github.com/cipherunits/fusion-snippet/issues](https://github.com/cipherunits/fusion-snippet/issues)
 
-For example:
+## License
 
-This extension contributes the following settings:
-
-- `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
-
-# fusion-snippet
+MIT

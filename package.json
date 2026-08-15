@@ -1,34 +1,65 @@
 {
   "name": "fusion-snippet",
-  "displayName": "fusion-snippet",
-  "description": "A collection of useful code snippets for Fusion Framework developers.",
-  "version": "0.0.1",
+  "displayName": "Fusion Snippet",
+  "description": "Code snippets for Fusion Framework developers — TypeScript, Python, and C#.",
+  "version": "1.0.0",
+  "publisher": "cipherunits",
+  "author": {
+    "name": "Cipher Unit",
+    "email": "cipherunit.dev@gmail.com",
+    "url": "https://cipherunit.xyz"
+  },
+  "license": "MIT",
+  "pricing": "Free",
+  "icon": "assets/fusion-logo.png",
+  "galleryBanner": {
+    "color": "#0B1220",
+    "theme": "dark"
+  },
+  "homepage": "https://fusion.cipherunit.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cipherunits/fusion-snippet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cipherunits/fusion-snippet/issues"
+  },
+  "qna": "https://github.com/cipherunits/fusion-snippet/issues",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
-  "activationEvents": [],
-  "main": "./dist/extension.js",
+  "keywords": [
+    "snippets",
+    "fusion",
+    "fusion-framework",
+    "typescript",
+    "python",
+    "csharp",
+    "c#",
+    "productivity",
+    "boilerplate"
+  ],
   "contributes": {
     "snippets": [
       {
         "language": "typescript",
-        "path": "./snippets/typescript/index.ts"
+        "path": "./snippets/typescript/snippets.json"
       },
       {
         "language": "python",
-        "path": "./snippets/python/index.ts"
+        "path": "./snippets/python/snippets.json"
       },
       {
         "language": "csharp",
-        "path": "./snippets/csharp/index.ts"
+        "path": "./snippets/csharp/snippets.json"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run package",
+    "vscode:prepublish": "pnpm run check-types && pnpm run lint",
     "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
     "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
     "watch": "npm-run-all -p watch:*",
@@ -43,15 +74,18 @@
     "prepare": "husky",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "precommit": "pnpm check-types && pnpm lint && pnpm format"
+    "precommit": "pnpm check-types && pnpm lint && pnpm format",
+    "vsix": "vsce package --no-dependencies",
+    "publish:vsce": "vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
-    "@types/vscode": "^1.125.0",
+    "@types/vscode": "^1.85.0",
     "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^3.7.1",
     "esbuild": "^0.28.1",
     "eslint": "^10.8.1",
     "husky": "^9.1.7",
