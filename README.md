@@ -43,4 +43,15 @@ For the latest progress and release updates, check:
 
 ## License
 
-MIT
+**MIT** — see [LICENSE](LICENSE) for details.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p align="center" style="margin-top: 100px;">
+  <b><i>Made with ❤️  for developers by CipherUnit</i></b>
+</p>
