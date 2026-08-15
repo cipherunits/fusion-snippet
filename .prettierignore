@@ -1,0 +1,9 @@
+node_modules
+out
+dist
+coverage
+.vscode-test
+*.vsix
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

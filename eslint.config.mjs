@@ -1,27 +1,50 @@
-import typescriptEslint from "typescript-eslint";
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
-export default [{
-    files: ["**/*.ts"],
-}, {
-    plugins: {
-        "@typescript-eslint": typescriptEslint.plugin,
-    },
+export default tseslint.config(
+  {
+    ignores: [
+      'node_modules/**',
+      'out/**',
+      'dist/**',
+      'coverage/**',
+      '.vscode-test/**',
+      '*.vsix',
+    ],
+  },
+
+  eslint.configs.recommended,
+
+  ...tseslint.configs.recommended,
+
+  {
+    files: ['**/*.ts'],
 
     languageOptions: {
-        parser: typescriptEslint.parser,
-        ecmaVersion: 2022,
-        sourceType: "module",
+      ecmaVersion: 2022,
+      sourceType: 'module',
     },
 
     rules: {
-        "@typescript-eslint/naming-convention": ["warn", {
-            selector: "import",
-            format: ["camelCase", "PascalCase"],
-        }],
+      curly: ['warn', 'all'],
+      eqeqeq: ['warn', 'always'],
 
-        curly: "warn",
-        eqeqeq: "warn",
-        "no-throw-literal": "warn",
-        semi: "warn",
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+
+      '@typescript-eslint/naming-convention': [
+        'warn',
+        {
+          selector: 'import',
+          format: ['camelCase', 'PascalCase'],
+        },
+      ],
     },
-}];
+  },
+);
