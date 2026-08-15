@@ -1,9 +1,9 @@
 node_modules
-out
 dist
+out
 coverage
 .vscode-test
 *.vsix
-package-lock.json
 pnpm-lock.yaml
+package-lock.json
 yarn.lock

@@ -12,10 +12,18 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
+    "snippets": [
       {
-        "command": "fusion-snippet.helloWorld",
-        "title": "Hello World"
+        "language": "typescript",
+        "path": "./snippets/typescript/index.ts"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python/index.ts"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp/index.ts"
       }
     ]
   },
@@ -32,7 +40,10 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "test": "vscode-test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "precommit": "pnpm check-types && pnpm lint && pnpm format"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

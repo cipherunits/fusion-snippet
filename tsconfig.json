@@ -1,24 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "Node16",
-      "moduleResolution": "Node16",
-      "lib": ["ES2022"],  
-      "rootDir": "src",
-      "outDir": "out",
-      "types": ["node", "mocha"],  
-      "strict": true,
-      "sourceMap": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "skipLibCheck": true
-    },
-    "exclude": [
-      "node_modules",
-      ".vscode-test"
-    ]
-  }
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "lib": ["ES2022"],
+    "types": ["node", "mocha"],
+    "rootDir": ".",
+    "outDir": "out",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["src/**/*.ts", "snippets/**/*.ts"],
+
+  "exclude": ["node_modules", "dist", "out", ".vscode-test"]
+}
