@@ -2,7 +2,7 @@
   "name": "fusion-snippet",
   "displayName": "Fusion Snippet",
   "description": "Code snippets for Fusion Framework developers — TypeScript, Python, and C#.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "cipherunits",
   "author": {
     "name": "Cipher Unit",

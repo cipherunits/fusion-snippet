@@ -1,5 +1,10 @@
 <p align="center">
-  <img src="./assets/fusion-logo.png" alt="Fusion Snippet" width="120" />
+  <img
+    src="./assets/logo.png"
+    alt="Fusion Snippet"
+    width="120"
+    style="border-radius: 18px;"
+  />
 </p>
 
 <h1 align="center">Fusion Snippet</h1>
