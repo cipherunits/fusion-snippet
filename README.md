@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="./assets/logo.png"
+    src="./assets/fusion-logo.png"
     alt="Fusion Snippet"
     width="120"
     style="border-radius: 18px;"
