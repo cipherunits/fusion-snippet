@@ -1,0 +1,40 @@
+{
+  "Fusion Product Module": {
+    "prefix": "fproduct",
+    "description": "Fusion Framework Product module (GET/POST/DELETE/PATCH)",
+    "body": [
+      "# Fusion Framework",
+      "# Docs:     https://fusion.cipherunit.xyz/",
+      "# Desktop:  https://fusion.cipherunit.xyz/en/gui",
+      "# CLI tool: https://github.com/cipherunits/fusion-tool",
+      "",
+      "",
+      "from fusion_framework.api import FusionBaseApi",
+      "from fusion_framework.route import route",
+      "from fusion_framework import status",
+      "",
+      "@route(",
+      "    \"${1:api/[module]/}\",",
+      "    tags=[\"${2:swagger}\"],",
+      "    desc=\"${3:Fusion Framework Api}\",",
+      "    version=\"${4:v1}\",",
+      "    deprecated=${5:False}",
+      ")",
+      "class ${6:ProductModule}(FusionBaseApi):",
+      "    \"\"\"${7:Product management module.}\"\"\"",
+      "",
+      "    def get(self):",
+      "        return self.response({\"products_id\": ${8:12}}, status=status.HTTP_SUCCESS)",
+      "",
+      "    def post(self):",
+      "        return self.response({\"products_id\": ${8:12}}, status=status.HTTP_201_CREATED)",
+      "",
+      "    def delete(self):",
+      "        return self.response({\"products_id\": ${8:12}}, status=status.HTTP_204_NO_CONTENT)",
+      "",
+      "    def patch(self):",
+      "        return self.response({\"products_id\": ${8:12}}, status=status.HTTP_SUCCESS)",
+      "$0"
+    ]
+  }
+}

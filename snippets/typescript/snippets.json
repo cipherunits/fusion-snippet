@@ -1,0 +1,40 @@
+{
+  "Fusion Product Module": {
+    "prefix": "fproduct",
+    "description": "Fusion Framework Product module (GET/POST/DELETE/PATCH)",
+    "body": [
+      "// Fusion Framework",
+      "// Docs:     https://fusion.cipherunit.xyz/",
+      "// Desktop:  https://fusion.cipherunit.xyz/en/gui",
+      "// CLI tool: https://github.com/cipherunits/fusion-tool",
+      "",
+      "import { FusionBaseApi, route, status } from \"fusion-framework\";",
+      "",
+      "export const ${1:ProductModule} = route(\"${2:api/[module]/}\", {",
+      "  tags: [\"${3:swagger}\"],",
+      "  desc: \"${4:Fusion Framework Api}\",",
+      "  version: \"${5:v1}\",",
+      "  deprecated: ${6:false},",
+      "})(",
+      "  class ${1:ProductModule} extends FusionBaseApi {",
+      "    get() {",
+      "      return this.response({ products_id: ${7:12} }, status.HTTP_SUCCESS);",
+      "    }",
+      "",
+      "    post() {",
+      "      return this.response({ products_id: ${7:12} }, status.HTTP_201_CREATED);",
+      "    }",
+      "",
+      "    delete() {",
+      "      return this.response({ products_id: ${7:12} }, status.HTTP_204_NO_CONTENT);",
+      "    }",
+      "",
+      "    patch() {",
+      "      return this.response({ products_id: ${7:12} }, status.HTTP_SUCCESS);",
+      "    }",
+      "  },",
+      ");",
+      "$0"
+    ]
+  }
+}

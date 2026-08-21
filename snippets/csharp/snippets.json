@@ -1,0 +1,33 @@
+{
+  "Fusion Product Module": {
+    "prefix": "fproduct",
+    "description": "Fusion Framework Product module (GET/POST/DELETE/PATCH)",
+    "body": [
+      "// Fusion Framework",
+      "// Docs:     https://fusion.cipherunit.xyz/",
+      "// Desktop:  https://fusion.cipherunit.xyz/en/gui",
+      "// CLI tool: https://github.com/cipherunits/fusion-tool",
+      "",
+      "using FusionFramework;",
+      "",
+      "namespace ${1:Products};",
+      "",
+      "[Route(\"${2:api/[module]}\", Tags = new[] { \"${3:swagger}\" }, Desc = \"${4:Fusion Framework Api}\", Version = \"${5:v1}\")]",
+      "public class ${6:ProductModule} : FusionBaseApi",
+      "{",
+      "    public object Get() =>",
+      "        Response(new { products_id = ${7:12} }, Status.HTTP_SUCCESS);",
+      "",
+      "    public object Post() =>",
+      "        Response(new { products_id = ${7:12} }, Status.HTTP_201_CREATED);",
+      "",
+      "    public object Delete() =>",
+      "        Response(new { products_id = ${7:12} }, Status.HTTP_204_NO_CONTENT);",
+      "",
+      "    public object Patch() =>",
+      "        Response(new { products_id = ${7:12} }, Status.HTTP_SUCCESS);",
+      "}",
+      "$0"
+    ]
+  }
+}
