@@ -2,7 +2,7 @@
   "name": "fusion-snippet",
   "displayName": "Fusion Snippet",
   "description": "Code snippets for Fusion Framework developers — TypeScript, Python, and C#.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "cipherunits",
   "author": {
     "name": "Cipher Unit",
@@ -59,22 +59,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run check-types && pnpm run lint",
-    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
-    "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
-    "watch": "npm-run-all -p watch:*",
-    "watch:esbuild": "node esbuild.js --watch",
-    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "check-types": "tsc --noEmit",
-    "lint": "eslint src",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
-    "test": "vscode-test",
+    "vscode:prepublish": "pnpm run format:check",
     "prepare": "husky",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "precommit": "pnpm check-types && pnpm lint && pnpm format",
     "vsix": "vsce package --no-dependencies --out packages"
   },
   "devDependencies": {
