@@ -16,23 +16,26 @@
 *.css    text eol=lf
 *.scss   text eol=lf
 *.svg    text eol=lf
+*.py     text eol=lf
+*.cs     text eol=lf
 
 # Shell / hooks (must stay LF on Windows)
 *.sh     text eol=lf
 .husky/* text eol=lf
 
 # Dotfiles without extension
-.gitignore     text eol=lf
-.gitattributes text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
 .prettierignore text eol=lf
-.vscodeignore  text eol=lf
-.npmrc         text eol=lf
-.editorconfig  text eol=lf
+.vscodeignore   text eol=lf
+.npmrc          text eol=lf
+.editorconfig   text eol=lf
+LICENSE         text eol=lf
 
 # Lockfiles
-pnpm-lock.yaml text eol=lf
+pnpm-lock.yaml    text eol=lf
 package-lock.json text eol=lf
-yarn.lock text eol=lf
+yarn.lock         text eol=lf
 
 # Binary — never touch line endings
 *.png  binary
@@ -51,7 +54,18 @@ yarn.lock text eol=lf
 *.eot  binary
 *.pdf  binary
 
-# GitHub Linguist
+# GitHub Linguist — default JSON handling
 *.json linguist-language=JSON
-snippets/** linguist-detectable=true
-assets/** linguist-vendored=false
+
+# Snippet bodies — attribute by target language (overrides *.json above)
+snippets/python/snippets.json     linguist-language=Python linguist-detectable=true
+snippets/typescript/snippets.json linguist-language=TypeScript linguist-detectable=true
+snippets/csharp/snippets.json     linguist-language=C# linguist-detectable=true
+
+# Placeholder scaffold files — exclude from language stats
+snippets/**/index.ts linguist-generated=true
+
+# Dev-only paths
+.husky/_/** linguist-vendored=true
+.vscode/**  linguist-vendored=true
+assets/**   linguist-vendored=false

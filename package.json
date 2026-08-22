@@ -75,8 +75,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "precommit": "pnpm check-types && pnpm lint && pnpm format",
-    "vsix": "vsce package --no-dependencies",
-    "publish:vsce": "vsce publish --no-dependencies"
+    "vsix": "vsce package --no-dependencies --out packages"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
